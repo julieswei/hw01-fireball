@@ -14,7 +14,7 @@ The scene is completed with an animated procedural background featuring a vertic
 
 ## Live Demo
 
-
+https://julieswei.github.io/hw01-fireball/
 
 # HW 1: WebGL Fireball
 
