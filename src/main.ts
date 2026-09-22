@@ -106,7 +106,7 @@ function main() {
 
   // This function will be called every frame
   function tick(timestamp: number) {
-    const time = timestamp * 0.001 * 1.93;
+    const time = timestamp * 0.001 * 3.0;
     camera.update();
     spirit.setCameraPos(camera.controls.eye);
     stats.begin();
