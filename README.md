@@ -1,3 +1,21 @@
+## Spirit Flame
+
+(Inspired by shrimp dumplings) Spirit Flame is an animated magical spirit! The spirit begins as an icosphere and is transformed using displacement and fBm noise to create an organic, flame-like silhouette with animated flame tongues.
+
+The frag shader uses procedural noise, color gradients, and Fresnel effects to create its glowing, shifting appearance. The spirit also has interactive personality controls for anger, embarrassment, and hyperness. Each emotion affects multiple aspects of its appearance and movement, including its coloration, flame movement, breathing, and silhouette.
+
+The scene is completed with an animated procedural background featuring a vertical color gradient, haze, and a softly moving and pulsing glow.
+
+## Screenshots
+
+![Spirit Flame](./spirit1.png)
+
+![Spirit Flame - Alternate State](./spirit2.png)
+
+## Live Demo
+
+
+
 # HW 1: WebGL Fireball
 
 <p align="center">
