@@ -39,7 +39,6 @@ const controls = {
 let icosphere: Icosphere;
 let square: Square;
 let prevTesselations: number = 5;
-let time = 0.0;
 
 
 function loadScene() {
@@ -106,7 +105,8 @@ function main() {
   ]);
 
   // This function will be called every frame
-  function tick() {
+  function tick(timestamp: number) {
+    const time = timestamp * 0.001 * 1.93;
     camera.update();
     spirit.setCameraPos(camera.controls.eye);
     stats.begin();
@@ -119,6 +119,12 @@ function main() {
       icosphere.create();
     }
 
+    spirit.setTime(time);
+    background.setTime(time);
+
+    spirit.setSpiritAnger(controls.spiritAnger);
+    spirit.setSpiritEmbarassment(controls.spiritEmbarassment);
+    spirit.setSpiritHyperness(controls.spiritHyperness);
 
     renderer.render(camera, background, [
       square,
@@ -130,13 +136,7 @@ function main() {
     ]);
     stats.end();
 
-    time += 0.01;
-    spirit.setTime(time);
-    background.setTime(time);
 
-    spirit.setSpiritAnger(controls.spiritAnger);
-    spirit.setSpiritEmbarassment(controls.spiritEmbarassment);
-    spirit.setSpiritHyperness(controls.spiritHyperness);
 
 
     // Tell the browser to call `tick` again whenever it renders a new frame
@@ -154,7 +154,7 @@ function main() {
   camera.updateProjectionMatrix();
 
   // Start the render loop
-  tick();
+  requestAnimationFrame(tick);
 }
 
 main();
